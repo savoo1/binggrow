@@ -1,0 +1,112 @@
+.how-it-works {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-color: #1F2328;
+  // padding-bottom: 75px;
+  overflow: hidden;
+  color: #fff;
+
+  .how-it-works-row {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .full-list {
+    background-color: #041b2f;
+    margin-top: 79px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .align-center{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .how-it-works {
+    position: relative;
+    .how-it-works-row {
+      gap: 10px;
+    }
+    .picture-frame {
+      height: max-content;
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .how-it-works {
+    .how-it-works-row {
+      gap: 20px;
+      flex-direction: column-reverse;
+    }
+    .step-boxes {
+      max-width: 700px;
+      margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .how-it-works {
+    padding-top: 51px;
+    .wrapper {
+      > .text-m {
+        margin-top: 12px;
+      }
+    }
+    .how-it-works-row {
+      margin-top: 32px;
+      gap: 33px;
+    }
+    .picture-frame {
+      max-width: fit-content;
+      border-radius: 14px;
+      .white-space {
+        border-radius: 12px;
+        padding: 8px;
+        .dots {
+          margin-bottom: 6px;
+          .dot {
+            width: 4px;
+            height: 4px;
+          }
+        }
+      }
+      img {
+        border-radius: 6px;
+        max-height: 650px;
+      }
+    }
+    .step-boxes {
+      gap: 17px;
+    }
+    .full-list {
+      position: relative;
+      margin-top: 46px;
+      .wrapper {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+      &:before {
+        width: 100px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        content: " ";
+        z-index: 9;
+        position: absolute;
+        background: linear-gradient(90deg, #041b2f 0%, rgba(4, 27, 47, 0) 100%);
+      }
+      &:after {
+        width: 100px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        content: " ";
+        position: absolute;
+        background: linear-gradient(-90deg, #041b2f 0%, rgba(4, 27, 47, 0) 100%);
+      }
+    }
+  }
+}

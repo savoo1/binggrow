@@ -1,0 +1,126 @@
+.testimonials{
+    border-radius: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.40);
+    background: rgba(224, 145, 69, 0.8);
+    backdrop-filter: blur(32px);
+    min-height: 592px;
+    max-width: 1342px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 64px;
+    .testimonial{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .avatar-img{
+        border-radius: 136px;
+        border: 2px solid rgba(255, 255, 255, 0.41);
+        padding: 0;
+        margin: 0;
+        width: 140px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .stars{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+    .slick-arrow{
+        font-size: 0;
+        padding: 0;
+        border: 0;
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+        position: absolute;
+        left: 64px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="32" fill="white" fill-opacity="0.2"/><rect x="1" y="1" width="62" height="62" rx="31" stroke="white" stroke-opacity="0.24" stroke-width="2"/><path d="M38 21L27.3536 31.6464C27.1583 31.8417 27.1583 32.1583 27.3536 32.3536L38 43" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>');
+    }
+    .slick-next{
+        left: unset;
+        right: 64px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="32" fill="white" fill-opacity="0.2"/><rect x="1" y="1" width="62" height="62" rx="31" stroke="white" stroke-opacity="0.24" stroke-width="2"/><path d="M27 21L37.6464 31.6464C37.8417 31.8417 37.8417 32.1583 37.6464 32.3536L27 43" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>');
+    }
+    .slick-dots{
+        display: flex;
+        gap: 8px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 64px;
+        align-items: center;
+        justify-content: center;
+        button{
+            border: 0;
+            padding: 0;
+            font-size: 0;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            opacity: 0.3;
+            border-radius: 100%;
+            transition: all ease 0.5s;
+        }
+        .slick-active{
+            button{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .testimonials{
+        margin-top: 110px;
+        min-height: unset;
+        padding: 24px;
+        padding-bottom: 120px;
+        margin-bottom: -320px;
+        br{
+            display: none;
+        }
+    }
+    .testimonials .slick-dots{
+        bottom: 56px;
+    }
+    .testimonials .slick-arrow{
+        top: unset;
+        transform: unset;
+        bottom: 32px;
+    }
+}
+
+@media(max-width: 500px){
+    .testimonials{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .testimonials .slick-arrow{
+        left: 15px;
+    }
+    .testimonials .slick-next{
+        left: unset;
+        right: 15px;
+    }
+}

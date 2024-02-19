@@ -1,0 +1,41 @@
+.made-in-voolt{
+    border-radius: 32px;
+    border: 4px solid #FFF;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0px 16px 56px 0px rgba(21, 34, 35, 0.32);
+    backdrop-filter: blur(5.042741775512695px);
+
+    display: inline-flex;
+    min-height: 169px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    gap: 17px;
+    p{
+        color: #1F2328;
+        font-family: Inter;
+        font-size: 65.419px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 87.226px; /* 133.333% */
+    }
+}
+
+@media(max-width: 768px){
+    .made-in-voolt{
+        padding: 0 15px;
+        min-height: 72px;
+        gap: 8px;
+        border-width: 2px;
+        border-radius: 13px;
+        svg{
+            max-width: 38px;
+            height: 50px;
+        }
+        p{
+            font-size: 27px;
+            line-height: 37.161px;
+            white-space: nowrap;
+        }
+    }
+}

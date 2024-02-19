@@ -1,0 +1,61 @@
+.create-website{
+    border-radius: 40px;
+    // border: 4px solid #FFF;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10.649999618530273px);
+    min-height: 1250px;
+    margin-top: 48px;
+    position: relative;
+    z-index: 2;
+    .logo{
+        width: 300px;
+    }
+    .in{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 65px;
+        h1{
+            max-width: 650px;
+            margin-top: 20px;
+        }
+        .subtitle{
+            max-width: 800px;
+            text-align: center;
+            margin-top: 17px;
+            margin-bottom: 30px;
+        }
+        .portfolio-slider{
+            margin-top: 73px;
+            margin-bottom: 120px;
+        }
+    }
+}
+@media(max-width: 1000px){
+    .create-website .in .subtitle{
+        max-width: 700px;
+    }
+}
+@media(max-width: 768px){
+    .create-website .logo {
+        width: 220px;
+    }
+    .create-website{
+        margin-top: 32px;
+        min-height: unset;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    .create-website .in{
+        padding: 24px;
+        .hero-phone-img{
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+@media(max-width: 500px){
+    .create-website .in{
+        padding: 24px 13px;
+    }
+}

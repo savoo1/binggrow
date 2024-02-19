@@ -1,0 +1,82 @@
+.try-now{
+    padding: 2px;
+    background: #fff;
+    background: linear-gradient(180deg, #fff 0%, #CAE4DB 100%);
+    border-radius: 16px;
+    backdrop-filter: blur(16px);    
+    position: relative;
+    max-width: 640px;
+    width: 100%;
+    &:before{
+        content: "";
+        border-radius: 16px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        bottom: 2px;
+        right: 2px;
+        background-color: #CAE4DB;
+        opacity: 1;
+        transition: all ease 0.5s;
+    }
+    .in{
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 92px;
+        padding: 0 22px 0 22px;
+        .icon-place{
+            border-radius: 322px;
+            border: 1px solid #FFF;
+            background: rgba(255, 255, 255, 0.72);
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            div{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        }
+    }
+}
+.smphone{
+    display: none;
+}
+
+@media(max-width: 550px){
+    .try-now .in .right{
+        display: none;
+    }
+    .try-now .in{
+        text-align: left;
+        padding: 15px;
+    }
+    .try-now .in .icon-place{
+        border-radius: 8px;
+        min-width: 64px;
+    }
+    .smphone{
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 0px;
+        max-width: 17px;
+    }
+}

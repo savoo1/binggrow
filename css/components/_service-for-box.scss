@@ -1,0 +1,64 @@
+.service-for-box{
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: left;
+
+    background: rgb(92,94,98);
+    background: linear-gradient(180deg, rgba(92,94,98,1) 0%, rgba(42,45,50,1) 100%);
+    position: relative;
+    cursor: pointer;
+    &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #CAE4DB;
+        opacity: 0;
+        transition: all ease 0.5s;
+    }
+
+    &:hover::before{
+        opacity: 1;
+    }
+
+    .inner{
+        min-height: 124px;
+        width: 100%;
+        display: flex;
+        background: #2A2D32;
+        border-radius: 16px;
+        position: relative;
+        align-items: center;
+        padding: 0 32px;
+        gap: 16px;
+    }
+    .icon-place{
+        padding: 1px;
+        background: rgb(92,94,98);
+        background: linear-gradient(180deg, rgba(92,94,98,1) 0%, rgba(42,45,50,1) 100%);
+        border-radius: 8px;
+        .in{
+            background: linear-gradient(180deg, rgba(67,70,74,1) 0%, rgba(51,54,58,1) 100%);
+            display: inline-flex;
+            width: 63px;
+            height: 63px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .service-for-box .inner{
+        min-height: 96px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

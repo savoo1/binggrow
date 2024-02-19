@@ -1,0 +1,158 @@
+.fullwidth{
+  width: 100%;
+}
+.portfolio-slider {
+  width: 100%;
+  .slick-slider {
+    margin-left: -12%;
+    margin-right: -12%;
+  }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 386px;
+    width: 100%;
+    height: 242px;
+    object-fit: cover;
+    object-position: top left;
+    z-index: -1 !important;
+  }
+  * {
+    transition: all ease 0.5s;
+  }
+
+  .slick-list {
+    height: 242px;
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .slick-dots {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .slick-track {
+    max-width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
+    perspective: 100px;
+  }
+
+  .slick-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    width: 100% !important;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s, margin 1s, opacity 1s;
+  }
+  // .slick-list:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: -10px;
+  //   background: rgb(255, 255, 255);
+  //   background: linear-gradient(
+  //     180deg,
+  //     rgba(255, 255, 255, 0) 21%,
+  //     rgba(255, 255, 255, 0.9) 100%
+  //   );
+  //   height: 100px;
+  // }
+
+  .slick-snext,
+  .slick-sprev {
+    display: block;
+  }
+
+  .slick-current {
+    opacity: 1;
+    position: relative;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+  }
+  .slick-slide{
+    display: flex;
+    align-items: end;
+  }
+
+  .slick-snext {
+    opacity: 1;
+    transform: translate3d(20%, 0, 0);
+    // margin-bottom: -25px;
+    z-index: 1;
+    img {
+      // transform: skewY(-5deg);
+      height: 208px;
+      width: 355px;
+    }
+  }
+  .slick-snext + .slick-slide {
+    opacity: 1;
+    transform: translate3d(35%, 0, 0);
+    // margin-bottom: -25px;
+    img {
+      // transform: skewY(-5deg);
+      width: 272px;
+      height: 160px;
+    }
+  }
+
+  .slick-sprev {
+    opacity: 1;
+    transform: translate3d(-35%, 0, 0);
+    // margin-bottom: -25px;
+    img {
+      // transform: skewY(5deg);
+      width: 272px;
+      height: 160px;
+    }
+  }
+  .slick-sprev + .slick-slide {
+    opacity: 1;
+    transform: translate3d(-20%, 0, 0);
+    // margin-bottom: -25px;
+    img {
+      // transform: skewY(5deg);
+      height: 208px;
+      width: 355px;
+    }
+  }
+}
+.change-website-slider .slick-arrow{
+  display: none !important;
+}
+
+@media(max-width: 1300px){
+
+  .change-website-box .numbers{
+    min-width: calc(25% - 15px);
+  }
+  .how-voolt-can-change-ur-website .change-website-box{
+    width: 100%;
+  }
+}
+.change-website-mobile-view{
+  display: none;
+}
+@media(max-width: 900px){
+  // .how-voolt-can-change-ur-website .change-website-box{
+  //   display: none;
+  // }
+  
+  .change-website-slider{
+    display: none;
+  }
+}
+
+

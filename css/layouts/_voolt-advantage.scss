@@ -1,0 +1,44 @@
+.voolt-advantage{
+    background-color: #1F2328;
+    position: relative;
+    padding-bottom: 50px;
+    .already-have-website{
+        width: 100%;
+    }
+    .img-advantage{
+        display: block;
+        margin: auto;
+        max-width: 1088px;
+        width: 100%;
+        margin-top: 57px;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 200px solid #CAE4DB;
+        top: 0;
+    }
+    .wrapper{
+        position: relative;
+        z-index: 2;
+    }
+    .paragraph{
+        max-width: 760px;
+        margin: auto;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .list{
+        margin: auto;
+        margin-top: 30px;
+    }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

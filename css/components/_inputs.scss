@@ -1,0 +1,17 @@
+.primary-input{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    input{
+        color: rgba(31, 35, 40, 0.50);
+        border-radius: 31px;
+        border: 2px solid rgba(31, 35, 40, 0.08);
+        background: rgba(255, 255, 255, 0.80);
+        padding: 18px 24px;
+        padding-right: 130px;
+        width: 100%;
+    }
+    *::placeholder{
+        color: rgba(31, 35, 40, 0.50);
+    }
+}

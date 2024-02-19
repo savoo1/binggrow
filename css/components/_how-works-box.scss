@@ -1,0 +1,41 @@
+.how-works-box{
+    border-radius: 16px;
+    backdrop-filter: blur(16px);
+    padding: 2px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    background: rgb(92,94,98);
+    background: linear-gradient(180deg, rgba(92,94,98,1) 0%, rgba(42,45,50,1) 100%);
+    position: relative;
+    display: inline-flex;
+    h2{
+        text-align: left;
+    }
+    .in{
+        background: #2A2D32;
+        border-radius: 16px;
+        display: flex;
+        padding: 22px;
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+        min-height: 364px;
+        max-width: 414px;
+        img{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media(max-width: 1300px){
+    .how-works-box{
+        max-width: calc(33.33% - 20px)
+    }
+}
+
+@media(max-width: 450px){
+    .how-works-box .in{
+        min-height: unset;
+    }
+}
