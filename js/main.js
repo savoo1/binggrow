@@ -1,42 +1,82 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   $(".testimonials").slick({
     slidesToShow: 1,
     arrows: true,
     infinite: true,
     dots: true,
   });
-  
+
   $(".faq-card .question").click(function (e) {
-      e.preventDefault();
-    
-      if ($(this).parent().hasClass("faq-card--active")) {
-        $(this).parent().removeClass("faq-card--active");
-        $(this).next().css("max-height", "0px");
-      } else {
-        $(this)
-          .parent()
-          .parent()
-          .parent()
-          .find(".faq-card--active .answer")
-          .css("max-height", "0px");
-        $(this)
-          .parent()
-          .parent()
-          .parent()
-          .find(".faq-card--active")
-          .removeClass("faq-card--active");
-        $(this).parent().addClass("faq-card--active");
-        var heightinside = $(this).next().find(".inner").height() + 50;
-        $(this)
-          .next()
-          .css("max-height", heightinside + "px");
-      }
-    });
-  
-  
-  
+    e.preventDefault();
+
+    if ($(this).parent().hasClass("faq-card--active")) {
+      $(this).parent().removeClass("faq-card--active");
+      $(this).next().css("max-height", "0px");
+    } else {
+      $(this).parent().parent().parent().find(".faq-card--active .answer").css("max-height", "0px");
+      $(this).parent().parent().parent().find(".faq-card--active").removeClass("faq-card--active");
+      $(this).parent().addClass("faq-card--active");
+      var heightinside = $(this).next().find(".inner").height() + 50;
+      $(this)
+        .next()
+        .css("max-height", heightinside + "px");
+    }
+  });
+
+  $(".navbar .lines").click(function (e) {
+    e.preventDefault();
+
+    if ($(this).parent().parent().find(".nav-items").hasClass("nav-items-active")) {
+      $(this).parent().parent().find(".nav-items").removeClass("nav-items-active");
+      $(this).removeClass("lines-active");
+      $(".mobile-blure").removeClass("mobile-blure-active");
+      $("body").removeClass("disable_scroll");
+    } else {
+      $(this).parent().parent().find(".nav-items").addClass("nav-items-active");
+      $(this).addClass("lines-active");
+      $(".mobile-blure").addClass("mobile-blure-active");
+      $("body").addClass("disable_scroll");
+    }
+  });
+
+  $(window).on("resize", function () {
+    if ($(window).width() > 768) {
+      $(".mobile-blure").removeClass("mobile-blure-active");
+      $("body").removeClass("disable_scroll");
+      $(".nav-items").removeClass("nav-items-active");
+      $(".lines").removeClass("lines-active");
+    }
+  });
+
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 500) {
+      $(".navbar").addClass("navbar-active--desktop");
+      $(".mobile-blure").addClass("mobile-blure-active--desktop");
+    } else {
+      $(".navbar").removeClass("navbar-active--desktop");
+      $(".mobile-blure").removeClass("mobile-blure-active--desktop");
+    }
+  });
+
+  $(".scroll").click(function (e) {
+    e.preventDefault();
+    $(".mobile-blure").removeClass("mobile-blure-active");
+    $("body").removeClass("disable_scroll");
+    $(".nav-items").removeClass("nav-items-active");
+    $(".lines").removeClass("lines-active");
+
+    var nameof = "." + $(this).attr("name");
+    $("html, body").animate(
+      {
+        scrollTop: $(nameof).offset().top - 120,
+      },
+      1000
+    );
+  });
+
   var rev = $(".portfolio-slider");
-  rev.on("init", function (event, slick, currentSlide) {
+  rev
+    .on("init", function (event, slick, currentSlide) {
       var cur = $(slick.$slides[slick.currentSlide]),
         next = cur.next(),
         prev = cur.prev().prev();
@@ -61,7 +101,7 @@ $( document ).ready(function() {
       slick.$next = next;
       cur.removeClass("slick-next").removeClass("slick-sprev");
     });
-  
+
   rev.slick({
     speed: 1000,
     arrows: false,
@@ -82,7 +122,7 @@ $( document ).ready(function() {
       return "";
     },
     /*infinite: false,*/
-  });  
+  });
 });
 
 $(".the-voolt-experience-slider").slick({

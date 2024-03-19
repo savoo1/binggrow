@@ -19,7 +19,7 @@
   padding: 30px 60px;
 
   border-radius: 12px;
-  background: linear-gradient(268deg, rgba(255, 255, 255, 0.10) 0.38%, rgba(255, 255, 255, 0.00) 162.14%);
+  background: linear-gradient(268deg, rgba(255, 255, 255, 0.1) 0.38%, rgba(255, 255, 255, 0) 162.14%);
 
   .background-image {
     position: absolute;
@@ -85,9 +85,29 @@
       text-align: center;
     }
   }
+  .for-btns {
+    border-radius: 5px !important;
+    border: 0 !important;
+    padding: 5px;
+    background-color: rgba(244, 245, 251, 0.1);
+
+    .button-s {
+      max-width: 100%;
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+      padding-left: 2px;
+      padding-right: 2px;
+      line-height: 110%;
+      font-size: 16px;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
 }
 .big-plan-rows {
-  .plan-box:last-child {
+  .plan-box:nth-child(1) {
     border: 0.5px solid #e09145;
   }
 }
@@ -109,51 +129,50 @@
   gap: 6px;
 }
 
-
 @media screen and (max-width: 1024px) {
-  .budget-plans-box-left{
+  .budget-plans-box-left {
     max-width: 250px;
   }
-  .budget-plans-box{
-    padding: 30px
+  .budget-plans-box {
+    padding: 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .budget-plans .wrapper{
+  .budget-plans .wrapper {
     padding-bottom: 48px;
   }
-  .budget-plans-box{
+  .budget-plans-box {
     flex-direction: column;
     padding: 30px 15px;
     gap: 32px;
-    .text-xl--slim{
+    .text-xl--slim {
       font-size: 18px;
     }
   }
-  .budget-plans-box-left{
+  .budget-plans-box-left {
     max-width: 600px;
-    br{
+    br {
       display: none;
     }
   }
-  .budget-plans .bottom-box{
+  .budget-plans .bottom-box {
     display: none;
   }
-  .plan-names .plan-box p{
+  .plan-names .plan-box p {
     font-size: 14px;
   }
-  .big-plan-rows .plan-box{
+  .big-plan-rows .plan-box {
     padding: 8px 0;
     gap: 14px;
   }
-  .big-plan-rows .plan-box:nth-child(2){
+  .big-plan-rows .plan-box:nth-child(2) {
     background-color: rgba(255, 255, 255, 0.05);
   }
-  .big-plan-rows .plan-box:nth-child(3){
+  .big-plan-rows .plan-box:nth-child(3) {
     background-color: rgba(255, 255, 255, 0.1);
   }
-  .plan-rows .plan-box .text-s--semibold{
+  .plan-rows .plan-box .text-s--semibold {
     font-size: 12px;
   }
 }
