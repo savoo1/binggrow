@@ -2769,4 +2769,416 @@ footer .down-text {
   .plan-rows .plan-box .text-s--semibold {
     font-size: 12px;
   }
+}
+.get-a-quote {
+  position: relative;
+}
+.get-a-quote .background-image img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.get-a-quote .background-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(17, 17, 17, 0.64) 0%, rgba(17, 17, 17, 0.64) 100%);
+  width: 100%;
+  height: 100%;
+}
+.get-a-quote .wrapper {
+  display: flex;
+  padding: var(--padding-80, 80px) var(--padding-16, 16px);
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.get-a-quote .wrapper h2 {
+  color: var(--neutral-white, #fff);
+  margin-bottom: 16px;
+}
+.get-a-quote .wrapper .sub-text {
+  color: var(--neutral-white, #fff);
+  position: relative;
+  margin-bottom: 64px;
+  z-index: 1;
+}
+.get-a-quote .wrapper .sub-text span {
+  display: block;
+}
+.get-a-quote .wrapper .arrow {
+  position: absolute;
+  left: -6px;
+  bottom: -45px;
+  z-index: -1;
+}
+.get-a-quote .wrapper .email-box {
+  margin-bottom: 16px;
+}
+@media (max-width: 320px) {
+  .get-a-quote .wrapper .bottom-boxes .small-text-box .text-small {
+    font-size: 11px;
+  }
+}
+.get-a-quote .wrapper .small-text-box p {
+  color: var(--neutral-white, #fff);
+}
+.get-a-quote .submit-lead-catcher-js {
+  margin-bottom: 16px;
+}
+.get-a-quote .submit-lead-catcher-js .primary-button {
+  margin: auto;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+  .get-a-quote .wrapper .arrow {
+    position: absolute;
+    left: calc(50% - 185px);
+    bottom: -45px;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .get-a-quote .wrapper .sub-text {
+    max-width: 660px;
+    margin: auto;
+    margin-bottom: 64px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .get-a-quote .wrapper .sub-text span {
+    display: inline-block;
+  }
+  .get-a-quote .wrapper h2 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px; /* 120% */
+    letter-spacing: -0.4px;
+    max-width: 580px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .email-box {
+    max-width: 580px;
+  }
+  .get-a-quote .submit-lead-catcher-js .primary-button {
+    max-width: 580px;
+  }
+  .message-box textarea {
+    max-width: 580px;
+  }
+  .get-a-quote-message form .primary-button {
+    max-width: 580px;
+  }
+  .get-a-quote .wrapper .arrow {
+    left: calc(50% - 289px);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .get-a-quote .wrapper {
+    padding: 136px var(--padding-16, 16px);
+  }
+}
+.blur {
+  background: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+  position: fixed;
+  inset: 0;
+  z-index: 103;
+}
+
+.form-holder {
+  overflow: auto;
+  background: var(--color-yellow, #edf7fe);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  max-width: 768px;
+  margin: auto;
+  padding: var(--padding-16, 16px) var(--padding-16, 16px) var(--padding-32, 32px) var(--padding-16, 16px);
+  gap: 16px;
+  border-radius: var(--border-8, 8px);
+  transform: scale(0);
+  animation: appearanim 0.25s ease-in 0.1s forwards;
+}
+.form-holder .primary-button {
+  max-width: unset;
+}
+.form-holder h3 {
+  text-align: center;
+  text-transform: capitalize;
+  width: 100%;
+  color: var(--color-black, #005299);
+}
+.form-holder h3 span {
+  color: var(--color-secondary, #50abf9);
+}
+.form-holder::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@keyframes appearanim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.quote-form-top {
+  display: none;
+  background: var(--color-primary, #005299);
+  max-height: 36px;
+  margin-bottom: 36px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+.quote-form-top a {
+  display: flex;
+  padding: var(--padding-8, 8px) 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--neutral-white, #fff);
+  font-weight: 500;
+}
+
+.quote-form--completed {
+  overflow: auto;
+  position: fixed;
+  z-index: 110;
+  top: 65px;
+  left: 8px;
+  right: 8px;
+  bottom: 65px;
+  border-radius: var(--radius-8, 8px);
+  background: var(--neutral-white, #fff);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 358px;
+  max-height: 548px;
+  margin: auto;
+  padding: var(--padding-32, 32px) var(--padding-16, 16px);
+  gap: var(--24px, 24px);
+  text-align: center;
+}
+.quote-form--completed h3 {
+  margin-bottom: 78px;
+}
+.quote-form--completed::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.hide-form {
+  display: none;
+}
+
+.fullname-and-email {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-bottom-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.close-form {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  cursor: pointer;
+  z-index: 12;
+}
+
+@media screen and (min-width: 768px) {
+  .form-holder {
+    max-width: 580px;
+    top: 10px;
+    bottom: 10px;
+    max-height: 550px;
+  }
+  .form-holder h3 {
+    padding-top: 0px;
+  }
+  .form-holder .quote-form-inputs .primary-button {
+    max-width: 100%;
+  }
+  .fullname-and-email {
+    flex-direction: unset;
+  }
+  .fullname-and-email input {
+    width: 100%;
+  }
+  .quote-form-inputs textarea {
+    min-height: 160px;
+  }
+  .quote-form--completed {
+    max-width: 580px;
+  }
+}
+.email-box {
+  position: relative;
+  max-width: 358px;
+  width: 100%;
+  margin: auto;
+}
+.email-box svg {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.email-box input[type=email] {
+  display: flex;
+  padding: var(--padding-12, 12px) var(--padding-16, 16px) var(--padding-12, 12px) 52px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--border-4, 4px);
+  border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+  background: var(--neutral-white, #fff);
+}
+.email-box input[type=email]::-moz-placeholder {
+  color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.email-box input[type=email]::placeholder {
+  color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.message-box {
+  width: 100%;
+}
+.message-box textarea {
+  display: flex;
+  padding: var(--padding-12, 12px) var(--padding-16, 16px);
+  border-radius: 4px;
+  border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+  background: var(--neutral-white, #fff);
+  max-width: 358px;
+  min-height: 120px;
+  width: 100%;
+  margin: auto;
+}
+
+.quote-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12, 12px);
+  width: 100%;
+}
+.quote-form-inputs input,
+.quote-form-inputs textarea {
+  display: flex;
+  padding: var(--padding-12, 12px) var(--padding-16, 16px);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+  background: var(--neutral-white, #fff);
+}
+.quote-form-inputs textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.custom-textarea {
+  position: relative;
+}
+.custom-textarea label {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+}
+.custom-textarea label span {
+  color: var(--green, #8dc63f);
+}
+.custom-textarea textarea:focus + label {
+  display: none;
+}
+.custom-textarea textarea:not(:-moz-placeholder-shown) + label {
+  display: none;
+}
+.custom-textarea textarea:not(:placeholder-shown) + label {
+  display: none;
+}
+.custom-textarea > label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.bottom-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+  width: 100%;
+}
+.bottom-boxes .small-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+}
+.bottom-boxes .small-text-box > div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4, 4px);
+}
+
+@media (max-width: 365px) {
+  .bottom-boxes .small-text-box {
+    gap: unset;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .bottom-boxes .small-text-box svg {
+    display: none;
+  }
+  .bottom-boxes .small-text-box > div {
+    display: flex;
+    gap: 1px;
+  }
+  .bottom-boxes .small-text-box .text-small {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) {
+  .bottom-boxes .small-text-box .text-small {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */

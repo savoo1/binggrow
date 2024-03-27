@@ -135,3 +135,42 @@ $(".the-voolt-experience-slider").slick({
   nextArrow:
     "<button type='button' class='slick-next pull-right slick-arrows'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36' fill='#CAE4DB'><circle cx='18' cy='18' r='17.25' transform='rotate(180 18 18)' stroke='#202122' stroke-width='1.5'/><path d='M19.4737 24L25 18M25 18L19.4737 12M25 18L10 18' stroke='#202122' stroke-width='1.5' stroke-linecap='round'/></svg></button>",
 });
+
+// popup form
+$(".trigger-form").click(function (e) {
+  e.preventDefault();
+  $(".quote-form").removeClass("hide-form");
+});
+
+$(".close-form-js").click(function (e) {
+  e.preventDefault();
+  $(".quote-form").addClass("hide-form");
+  $(".quote-form--completed").addClass("hide-form");
+});
+$(".form-submit").click(function (e) {
+  e.preventDefault();
+
+  var contact_form = {
+    name: $(".contact-name").val(),
+    service: $(".contact-service").val(),
+    email: $(".contact-email").val(),
+    message: $(".contact-message").val(),
+  };
+
+  $.ajax({
+    type: "POST",
+    url: "../php/contact-form.php",
+    data: contact_form,
+    dataType: "json",
+    success: function (data) {
+      if (data.status == "success") {
+        return true;
+      }
+    },
+    error: function (data) {
+      alert("fail ajax");
+    },
+  });
+
+  $(".quote-form--completed").removeClass("hide-form");
+});

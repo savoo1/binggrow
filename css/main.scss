@@ -23,8 +23,6 @@
 @import "components/_the-voolt-experience-slider.scss";
 @import "components/_flex-row.scss";
 
-
-
 // layouts
 @import "layouts/create-website.scss";
 @import "layouts/service-for.scss";
@@ -33,3 +31,8 @@
 @import "layouts/how-it-works.scss";
 @import "layouts/voolt-marketing.scss";
 @import "layouts/_budget-plans.scss";
+
+@import "layouts/get-a-quote/_get-a-quote.scss";
+@import "layouts/quote-form/_quote-form.scss";
+@import "layouts/_forms.scss";
+@import "layouts/_bottom-boxes.scss";

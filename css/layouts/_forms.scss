@@ -1,0 +1,97 @@
+//submit email
+.email-box {
+  position: relative;
+  max-width: 358px;
+  width: 100%;
+  margin: auto;
+  svg {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  input[type="email"] {
+    display: flex;
+    padding: var(--padding-12, 12px) var(--padding-16, 16px) var(--padding-12, 12px) 52px;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    border-radius: var(--border-4, 4px);
+    border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--neutral-white, #fff);
+  }
+
+  input[type="email"]::placeholder {
+    color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+//submit message
+.message-box {
+  width: 100%;
+  textarea {
+    display: flex;
+
+    padding: var(--padding-12, 12px) var(--padding-16, 16px);
+    border-radius: 4px;
+    border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--neutral-white, #fff);
+
+    max-width: 358px;
+    min-height: 120px;
+    width: 100%;
+    margin: auto;
+  }
+}
+//full form for get a quote
+
+.quote-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12, 12px);
+  width: 100%;
+  input,
+  textarea {
+    display: flex;
+    padding: var(--padding-12, 12px) var(--padding-16, 16px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    border-radius: 4px;
+    border: 1px solid var(--neutral-grey-light, rgba(17, 17, 17, 0.07));
+    background: var(--neutral-white, #fff);
+  }
+  textarea {
+    min-height: 120px;
+    resize: none;
+  }
+}
+.custom-textarea {
+  position: relative;
+  label {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+    span {
+      color: var(--green, #8dc63f);
+    }
+  }
+  textarea:focus + label {
+    display: none;
+  }
+  textarea:not(:placeholder-shown) + label {
+    display: none;
+  }
+  & > label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+}
