@@ -185,6 +185,17 @@
     }
   }
 }
+@media (max-width: 900px) {
+  .navbar .logo{
+    max-width: 150px;
+  }
+  .nav-items{
+    gap: 10px;
+    a{
+      font-size: 14px;
+    }
+  }
+}
 
 @media (max-width: 450px) {
   .navbar {

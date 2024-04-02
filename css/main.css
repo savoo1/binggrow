@@ -618,6 +618,17 @@ h3 {
     opacity: 0;
   }
 }
+@media (max-width: 900px) {
+  .navbar .logo {
+    max-width: 150px;
+  }
+  .nav-items {
+    gap: 10px;
+  }
+  .nav-items a {
+    font-size: 14px;
+  }
+}
 @media (max-width: 450px) {
   .navbar .button-s {
     display: none;
