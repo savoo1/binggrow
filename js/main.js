@@ -140,37 +140,63 @@ $(".the-voolt-experience-slider").slick({
 $(".trigger-form").click(function (e) {
   e.preventDefault();
   $(".quote-form").removeClass("hide-form");
+  $("body").addClass("disable_scroll");
 });
 
 $(".close-form-js").click(function (e) {
   e.preventDefault();
   $(".quote-form").addClass("hide-form");
   $(".quote-form--completed").addClass("hide-form");
+  $("body").removeClass("disable_scroll");
 });
 $(".form-submit").click(function (e) {
   e.preventDefault();
 
-  var contact_form = {
-    name: $(".contact-name").val(),
-    service: $(".contact-service").val(),
-    email: $(".contact-email").val(),
-    message: $(".contact-message").val(),
-  };
-
-  $.ajax({
-    type: "POST",
-    url: "../php/contact-form.php",
-    data: contact_form,
-    dataType: "json",
-    success: function (data) {
-      if (data.status == "success") {
-        return true;
+  if ($(".quote-form-inputs")[0].checkValidity() ) {
+    var contact_form = {
+      name: $(".contact-name").val(),
+      service: $(".contact-service").val(),
+      email: $(".contact-email").val(),
+      message: $(".contact-message").val(),
+    };
+  
+  
+  
+    $.ajax({
+      type: "POST",
+      url: "../php/contact-form.php",
+      data: contact_form,
+      dataType: "json",
+      success: function (data) {
+        if (data.status == "success") {
+          return true;
+        }
+      },
+      error: function (data) {
+        alert("fail ajax");
+      },
+    });
+  
+    $(".quote-form--completed").removeClass("hide-form");
+  }else{
+    $(".quote-form-inputs input").each(function( index ) {
+       if (!$(this)[0].validity.valid ) {
+        $(this).css("border", "1px solid red");
       }
-    },
-    error: function (data) {
-      alert("fail ajax");
-    },
-  });
-
-  $(".quote-form--completed").removeClass("hide-form");
+    });
+    if (!$(".quote-form-inputs textarea")[0].validity.valid ) {
+      $(".quote-form-inputs textarea").css("border", "1px solid red");
+    }
+  }
 });
+
+$(".quote-form-inputs input").on( "keyup", function() {
+  if ($(this)[0].validity.valid ) {
+    $(this).css("border", "1px solid #fff");
+  }
+} );
+$(".quote-form-inputs textarea").on( "keyup", function() {
+  if ($(this)[0].validity.valid ) {
+    $(this).css("border", "1px solid #fff");
+  }
+} );

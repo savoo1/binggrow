@@ -1192,22 +1192,22 @@
 
         <form class="quote-form-inputs form-js">
           <div class="fullname-and-email">
-            <input class="text-s contact-name" placeholder="Name" name="fullName" type="text" />
-            <input class="text-s contact-email" placeholder="Email" name="email" type="email" />
+            <input class="text-s contact-name" placeholder="Name" name="fullName" type="text" required/>
+            <input class="text-s contact-email" placeholder="Email" name="email" type="email" required/>
           </div>
-          <input class="text-s contact-service" placeholder="What services do you cover?" id="services" name="services" type="text" />
+          <input class="text-s contact-service" placeholder="What services do you cover?" id="services" name="services" type="text" required />
           <div class="custom-textarea">
-            <textarea id="colored-textarea-placeholder" class="text contact-message" name="comments" placeholder=" "></textarea>
-            <label class="text-s" for="colored-textarea-placeholder">Let us know about any details you would like us to create on your website</label>
+            <textarea id="colored-textarea-placeholder" class="text-s  contact-message" name="comments" placeholder="Let us know about any details you would like us to create on your website" required></textarea>
+            <!-- <label class="text-s" for="colored-textarea-placeholder">Let us know about any details you would like us to create on your website</label> -->
           </div>
 
-          <a href="" class="primary-button text-m--bold centerBtn8 form-submit">
+          <button class="form-validate-cta primary-button text-m--bold centerBtn8 form-submit">
             Get Your Free Website
             <svg xmlns="http://www.w3.org/2000/svg" class="absolute-right-middle" width="88" height="56" viewBox="0 0 88 56" fill="none">
               <circle cx="60" cy="28" r="28" fill="white"></circle>
               <path d="M73.0607 29.0607C73.6464 28.4749 73.6464 27.5251 73.0607 26.9393L63.5147 17.3934C62.9289 16.8076 61.9792 16.8076 61.3934 17.3934C60.8076 17.9792 60.8076 18.9289 61.3934 19.5147L69.8787 28L61.3934 36.4853C60.8076 37.0711 60.8076 38.0208 61.3934 38.6066C61.9792 39.1924 62.9289 39.1924 63.5147 38.6066L73.0607 29.0607ZM48 29.5L72 29.5L72 26.5L48 26.5L48 29.5Z" fill="#e09145"></path>
             </svg>
-          </a>
+          </button>
           <div class="bottom-boxes">
             <div class="small-text-box">
               <div>
