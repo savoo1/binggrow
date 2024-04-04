@@ -54,6 +54,10 @@
       justify-content: center;
       border-radius: 8px;
       transform: all 0.25s ease-in;
+      svg{
+        max-width: 33px;
+        max-height: 33px;
+      }
     }
   }
 

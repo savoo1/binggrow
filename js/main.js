@@ -160,7 +160,7 @@ $(".form-submit").click(function (e) {
       message: $(".contact-message").val(),
     };
   
-  
+    $(".quote-form--completed").removeClass("hide-form");
   
     $.ajax({
       type: "POST",
@@ -171,13 +171,10 @@ $(".form-submit").click(function (e) {
         if (data.status == "success") {
           return true;
         }
-      },
-      error: function (data) {
-        alert("fail ajax");
-      },
+      }
     });
   
-    $(".quote-form--completed").removeClass("hide-form");
+    
   }else{
     $(".quote-form-inputs input").each(function( index ) {
        if (!$(this)[0].validity.valid ) {

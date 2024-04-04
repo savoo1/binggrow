@@ -847,6 +847,10 @@ h3 {
   border-radius: 8px;
   transform: all 0.25s ease-in;
 }
+.service-for-box .icon-place .in svg {
+  max-width: 33px;
+  max-height: 33px;
+}
 .service-for-box:hover .inner {
   background: #fff;
   transform: all 0.25s ease-in;

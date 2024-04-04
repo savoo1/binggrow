@@ -1,5 +1,5 @@
 <?php
-$mailto = "markokostic96@gmail.com";  //My email address
+$mailto = "support@bringgrow.com";  //My email address
 //getting customer data
 $name = $_POST['name'];
 $fromEmail = $_POST['email']; //getting customer email
@@ -10,8 +10,8 @@ $subject = "User Contact Information"; //getting subject line from client
 $subject2 = "Confirmation: Message was submitted successfully to Apps Technology LLC"; // For customer confirmation
 
 //Email body I will receive
-$message = "Cleint Name: " . "\n" . $name . "\n\n"
-"Service: " . "\n" . $service . "\n\n"
+$message = "Cleint Name: " . "\n" . $name . "\n\n" .
+"Service: " . "\n" . $service . "\n\n" .
 "Email: " . "\n" . $fromEmail . "\n\n"
 . "Client Message: " . "\n" . $_POST['message'];
 
