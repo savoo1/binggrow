@@ -2113,7 +2113,7 @@ footer .down-text {
   margin: auto;
 }
 .addpadding-terms p {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.5px;
 }
@@ -2121,6 +2121,10 @@ footer .down-text {
 .addpadding-terms h3,
 .addpadding-terms p {
   text-align: left !important;
+}
+
+.addpadding-terms * {
+  font-family: "Inter", sans-serif !important;
 }
 
 .voolt-experience {
