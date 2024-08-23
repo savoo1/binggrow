@@ -2027,7 +2027,7 @@ footer .down-text {
   }
 }
 .service-for {
-  background-color: #1F2328;
+  background-color: #1f2328;
   position: relative;
   margin-top: 127px;
   padding-bottom: 81px;
@@ -2039,7 +2039,7 @@ footer .down-text {
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-bottom: 200px solid #1F2328;
+  border-bottom: 200px solid #1f2328;
   top: -200px;
 }
 .service-for:after {
@@ -2049,7 +2049,7 @@ footer .down-text {
   height: 0;
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
-  border-bottom: 200px solid #CAE4DB;
+  border-bottom: 200px solid #cae4db;
   bottom: 0;
 }
 .service-for .in-main {
@@ -2104,6 +2104,25 @@ footer .down-text {
     width: 100%;
   }
 }
+.addpadding-terms {
+  padding: 50px;
+  display: block !important;
+}
+.addpadding-terms h1 {
+  text-align: center;
+  margin: auto;
+}
+.addpadding-terms p {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.addpadding-terms h2,
+.addpadding-terms h3,
+.addpadding-terms p {
+  text-align: left !important;
+}
+
 .voolt-experience {
   max-width: 1012px;
   width: 100%;
